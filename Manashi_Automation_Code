@@ -1,0 +1,91 @@
+
+public class Locator {
+
+	WebElement element=null;
+	
+	//Login Locators
+	WebElement LOGIN_FRAME=new WebElement("//div[@class='idxLoginFrameBoxInner']", "Login Frame Box");
+	WebElement USER_NAME=new WebElement("//input[@id='idx_form_TextBox_0']", "UserName Text-Box");
+	WebElement PASSWORD=new WebElement("//input[@id='loginPassword']", "Password Text-Box");
+	WebElement LOGIN_BUTTON =new WebElement("//span[@id='dijit_form_Button_0_label']", "Login Button");
+	
+	
+	//Quick Access Section Locator [QAS]
+	
+	WebElement ORDER_NUMBER_TEXTBOX_IN_QAS= new WebElement("//input[@id='idx_form_TextBox_0']", "Ordernumber text-box in Quick Access Section");
+	WebElement FIND_ORDER_BUTTON=new WebElement("//span[contains(@class,'dijitButtonContents') and contains(.,'Find Order')]", "Find Order Button");
+	WebElement TELEPHONE_TEXTBOX_IN_QAS= new WebElement("//input[@id='idx_form_TextBox_4']", "Telephone Text Box in Quick Search Section");
+	WebElement EMAIL_ADDRESS_TEXTBOX_IN_QAS= new WebElement("//input[@id='idx_form_TextBox_2']", "Email Address Text-Box in Quick Access Section");
+	
+	//Related Task
+	WebElement ORDER_SEARCH_LINK = new WebElement("//a[@class='idxLinkDerived idxLink' and contains(.,'Order Search')]", "Order Search Link under Related Task");
+	WebElement VIEW_ALL_LINES_LINK=new WebElement("//a[text()='View All Lines']", "View All lines in Order summary Page");
+	WebElement VIEW_ALL_INVOICES_LINK=new WebElement("(//a[text()='View All Invoices'])[1]", "View All Invoices Link under Related Task");
+	WebElement SEND_ORDER_EMAIL=new WebElement("//div[@id='sc_plat_dojo_widgets_Link_63']//a[text()='Send Order EMail']", "Send Order Email under Related task");
+	WebElement SEND_ORDER_EMAIL_POP_UP=new WebElement("//div[@id='dijit_Dialog_1']", "Send Order Email popUp");
+	WebElement EMAIL_TEXT_BOX_IN_POPUP=new WebElement("//input[@id='idx_form_TextBox_19']", "Email text box in send order email popup");
+	WebElement CONFIRM_BUTTON_IN_POPUP=new WebElement("//span[@id='dijit_form_Button_127_label']", "Confirm button in send order email popup");
+	
+	//Order Search Tab Locator
+	WebElement ORDER_SEARCH_TAB=new WebElement("//div[@id='idx_layout_ContentPane_251' and contains(.,'Order Search')]", "Order Search Tab");
+	WebElement ORDER_NUMBER_TEXTBOX= new WebElement("//input[@id='idx_form_TextBox_10']", "Order Number Text in Order Search Tab");
+	WebElement SEARCH_BUTTON=new WebElement("//span[@id='dijit_form_Button_30' and contains(.,'Search')]", "Search Button in Order Search Tab");
+	WebElement ORDER_NUMBER_IN_SEARCH_RESULT= new WebElement("(//div[contains(@class,'gridxRow')]//a)[{0}]", "Order Number in Search Result in Order Search");
+	WebElement EMAIL_IN_SEARCH_BY_CUSTOMER=new WebElement("//input[@id='idx_form_TextBox_13']", "Email Address Text Box under Search By Customer in Order Search Tab");
+	WebElement FIRST_NAME_IN_SEARCH_BY_CUSTOMER= new WebElement("//input[@id='idx_form_TextBox_42']", "First Name Text Box in Search By Customer in Order Search Tab");
+	WebElement LAST_NAME_IN_SEARCH_BY_CUSTOMER=new WebElement("//input[@id='idx_form_TextBox_43']", "Last Name Text Box in Search By Customer in Order Search Tab");
+	WebElement TELEPHONE_NUMBER_IN_SEARCH_BY_CUSTOMER= new WebElement("//input[@id='idx_form_TextBox_41']", "Telephone Numebr in Search By Customer in Order Search Tab ");
+	WebElement POSTAL_CODE_IN_SEARCH_BY_CUSTOMER= new WebElement("//input[@id='idx_form_TextBox_44']", "Postal Code in Search By Customer in Order Search Tab");
+	WebElement ORDERBY_DROPDOWN=new WebElement("(//div[@class='dijitInline']//input[contains(@class,'dijitArrowButtonInner')])[5]", "Order By dropdown in Order Search Page");
+	WebElement ORDER_DATE_IN_SEARCH_RESULT=new WebElement("(//div[@class='gridxBody gridxBodyRowHoverEffect']//td[@aria-describedby='gridx_Grid_0-6'])[{0}]", "Order Date from Search Result");
+	WebElement CUSTOMER_NAME_IN_SEARCH_RESULT=new WebElement("(//td[@aria-describedby='gridx_Grid_0-2'])[{0}]", "Customer Name in Search result");
+	WebElement EMPTY_SEARCH_RESULT_TABLE=new WebElement("//div[text()='No items to display']", "'No items to display' text in Search Result");
+	
+	 //Locator for Order Summary Tab
+	WebElement ORDER_SUMMARY_TAB= new WebElement("//span[@class='tabLabel' and contains(.,'{0}')]", "Order Summary Tab Title");// Pass the Order Number
+	WebElement EXPECTED_DATE=new WebElement("(//div[@class='fulfillmentAddress']//a[@linkuid='ExpectedOn'])[1]", "Expected date in Order Summary");
+	WebElement ADDITIONAL_INFORMATION_LINK=new WebElement("//a[text()='Show Additional Information']", "Show Additional Information in Order Summary");
+	WebElement ADDITONAL_INFORMATION_POP_UP=new WebElement("//div[@id='sc_plat_dojo_layout_AdvancedTableLayout_9']", "Addtional Information Popup");
+	WebElement EXPECTED_DATE_IN_ADDITIONAL_INFORMATION_POPUP=new WebElement("//div[@id='sc_plat_dojo_widgets_DataLabel_8']//span[@class='scDataValue']", "Expected Date in Additonal Information PopUp");
+	WebElement QUANTITY_IN_ADDTIONAL_INFORMATION_POPUP=new WebElement("//div[@class='gridxMain']//td[@aria-describedby='gridx_Grid_2-3']", "Quantity in addtional Popup");
+	WebElement TRACKING_NUMBER_IN_ADDTIONAL_INFORAMTION_POPUP=new WebElement("//div[@id='sc_plat_dojo_widgets_DataLabel_12']//span[@class='scDataValue']", "Tracking Id in Addtional Information Popup");
+	WebElement ESTIMATED_ARRIVAL_IN_ADDTIONAL_INFORAMTION_POPUP=new WebElement("//div[@id='sc_plat_dojo_widgets_DataLabel_9']//span[@class='scDataValue']", "Estimated Arrival in Additonal Information PopUp");
+	WebElement CARRIER_SERVICE_IN_ADDTIONAL_INFORMATION_POPUP=new WebElement("//div[@id='sc_plat_dojo_widgets_DataLabel_11']//span[@class='scDataValue']", "Carrier Service in Additional Information PopUp");
+	WebElement SHIPPMENT_NUMBER_IN_ADDTIONAL_INFORMATION_POPUP=new WebElement("//div[@id='sc_plat_dojo_widgets_DataLabel_14']//span[@class='scDataValue']", "Shipment Number in Addtional Information Poup");
+	WebElement SHIPPING_ADDRESS=new WebElement("//div[@id='idx_layout_ContentPane_170']", "Shipping Address in Addtional Information Popup");
+	WebElement ALL_LINKS_IN_RELATED_TASK=new WebElement("//div[@id='idx_layout_TitlePane_11_pane']//a[@class='idxLinkDerived idxLink']", "All Links under ");
+	//related Task
+	
+	
+	
+	//Order Invoice
+	WebElement INVOICE_NUMBER= new WebElement("//div[@id='gridx_Grid_19']//td[@aria-describedby='gridx_Grid_19-1']", "Invoice Number in Order Invoice");
+	WebElement SHIPPMENT_NUMBER=new WebElement("//div[@id='sc_plat_dojo_widgets_DataLabel_136']//span[@class='scDataValue']", "Shippment Number in Order Invoice");
+	WebElement INVOICED_ON=new WebElement("//div[@id='sc_plat_dojo_widgets_DataLabel_135']//span[@class='scDataValue']", "Invoiced On in Order Invoice");
+	WebElement INVOICED_AMOUNT=new WebElement("//div[@id='gridx_Grid_19']//td[@aria-describedby='gridx_Grid_19-4']", "Invoiced Amount in Order Invoice");
+	WebElement BILL_TO_IN_ORDER_INVOICE=new WebElement("//div[@id='idx_layout_ContentPane_1215']", "Bill to in Order Invoice");
+	
+	//Home Page
+	WebElement PRODUCT_BROWSING=new WebElement("//a[text()='Product Browsing']", "Product Browsing Link Home Page");
+	WebElement SELECT_ENTERPRISE_IN_POPUP=new WebElement("//div[contains(@class,'popup dijitDialog')]//input[contains(@class,'dijitArrowButtonInner')]", "Select Enterprise in Enterprise Pop Up");
+	WebElement APPLY_BUTTON_IN_POPUP=new WebElement("//span[@id='dijit_form_Button_71_label']", "Apply button in Enterprise Pop-Up");
+	WebElement CREATE_ORDER=new WebElement("//div[@id='idx_layout_ContentPane_14']//a[text()='Create Order']", "Create Order Link in Home Page");
+	WebElement ALL_REALTED_TASK_LINK=new WebElement("//div[@id='idx_layout_TitlePane_3_pane']//a[@class='idxLinkDerived idxLink']", "All links under Related task");
+	
+	
+	//Product Browsing
+	WebElement KEYWORD_TEXT_BOX=new WebElement("//input[@id='idx_form_TextBox_22']", "Keyword Text-Box in Product Browse");
+	WebElement MAGNIFIER_BUTTON=new WebElement("//img[@id='sc_plat_dojo_widgets_Image_149']", "Magnifier button in Product Browse");
+	
+	//DRaft Order
+	
+	WebElement DRAFT_ORDER_TAB=new WebElement("//span[contains(.,'Draft Order')]", "Drafts Order Tab");
+	WebElement FIRSTNAME_IN_CUSTOMER_SEARCH_CRITERIA=new WebElement("//input[@id='idx_form_TextBox_39']", "First name Text box in Customer Search Criteria");
+	WebElement LASTNAME_IN_CUSTOMER_SEARCH_CRITERIA=new WebElement("//input[@id='idx_form_TextBox_40']", "Last Name textbox in Cuatomer Search Criteria");
+	WebElement SEARCH_BUTTON_IN_DRAFT_ORDER=new WebElement("//span[@id='dijit_form_Button_172_label']","Search Button in draft Order");
+	WebElement NEXT_BUTTON=new WebElement("//span[@id='dijit_form_Button_168_label']", "Next button in Draft Order Page");
+	WebElement PRODUCT_ID_TEXT_BOX=new WebElement("//input[@id='idx_form_TextBox_96']", "Product Id Text Box in Add Item Page");
+	WebElement ADD_BUTTON=new WebElement("//span[@id='dijit_form_Button_176_label']", "Add button in Add Item Page");
+	
+	
+}
