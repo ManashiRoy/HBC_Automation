@@ -129,5 +129,4 @@ public class ComLocators {
 	PageElement CUST_PHONE_NUMBER=new PageElement("//input[@id='idx_form_TextBox_13']", "Customer phone number input");
 	PageElement RETURN_SEARCH_RESULT=new PageElement("(//a[@linkuid='OrderNo'])[1]", "Return search result");
 	PageElement CUST_EMAIL=new PageElement("//input[@id='idx_form_TextBox_14']", "Return search email input");
-
 }
