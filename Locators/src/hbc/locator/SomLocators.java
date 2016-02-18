@@ -44,6 +44,4 @@ public class SomLocators {
 	PageElement START_CUSTOMER_PICK=new PageElement("//a[text()='Start Customer Pick']", "start customer pick link");
 	PageElement RECORD_BACKROOM_PICK=new PageElement("//a[text()='Record Backroom Pick']", "Record backroom Pick link");
 	PageElement PRINT_RECEIPT=new PageElement("//a[text()='Print Receipt']", "Print receip link");
-	
-
 }

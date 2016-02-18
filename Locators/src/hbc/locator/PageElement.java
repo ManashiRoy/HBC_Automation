@@ -3,7 +3,8 @@ package hbc.locator;
 
 public class PageElement {
       
-      private String value;
+/*Element file*/
+	private String value;
       private String description;
       
       public PageElement(String value, String description) {
